@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ShopSmart - Online Shopping</title>
+
+<style>
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial, Helvetica, sans-serif;
+}
+
+body{
+background:#f4f4f4;
+}
+
+/* HEADER */
+header{
+background:#111;
+color:white;
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:15px 10%;
+}
+
+header h1{
+color:#ff9800;
+}
+
+nav a{
+color:white;
+margin:0 15px;
+text-decoration:none;
+}
+
+nav a:hover{
+color:#ff9800;
+}
+
+/* HERO SECTION */
+.hero{
+background:url("https://images.unsplash.com/photo-1607082348824-0a96f2a4b9da") center/cover no-repeat;
+height:400px;
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
+color:white;
+text-align:center;
+}
+
+.hero h2{
+font-size:40px;
+margin-bottom:10px;
+}
+
+.hero button{
+padding:12px 25px;
+border:none;
+background:#ff9800;
+color:white;
+font-size:16px;
+cursor:pointer;
+}
+
+/* CONTAINER */
+.container{
+display:grid;
+grid-template-columns:1fr 3fr;
+gap:20px;
+padding:40px 10%;
+}
+
+/* SIDEBAR */
+.sidebar{
+background:white;
+padding:20px;
+border-radius:10px;
+}
+
+.sidebar h3{
+margin-bottom:10px;
+}
+
+.sidebar ul{
+list-style:none;
+}
+
+.sidebar li{
+padding:8px 0;
+border-bottom:1px solid #eee;
+}
+
+/* PRODUCTS GRID */
+.products{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+gap:20px;
+}
+
+.product{
+background:white;
+padding:15px;
+border-radius:10px;
+text-align:center;
+transition:0.3s;
+}
+
+.product:hover{
+transform:scale(1.05);
+}
+
+.product img{
+width:100%;
+height:180px;
+object-fit:cover;
+border-radius:10px;
+}
+
+.price{
+color:#e91e63;
+font-weight:bold;
+margin:10px 0;
+}
+
+.product button{
+background:#ff9800;
+border:none;
+padding:10px 15px;
+color:white;
+cursor:pointer;
+}
+
+/* DISCOUNT SECTION */
+.discount{
+background:#ff9800;
+color:white;
+padding:60px 10%;
+text-align:center;
+margin-top:40px;
+}
+
+.discount h2{
+font-size:35px;
+margin-bottom:10px;
+}
+
+/* TESTIMONIALS */
+.testimonials{
+padding:50px 10%;
+background:white;
+}
+
+.testimonials h2{
+text-align:center;
+margin-bottom:30px;
+}
+
+.testimonial-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:20px;
+}
+
+.testimonial{
+background:#f4f4f4;
+padding:20px;
+border-radius:10px;
+}
+
+/* FOOTER */
+footer{
+background:#111;
+color:white;
+text-align:center;
+padding:20px;
+margin-top:40px;
+}
+
+/* RESPONSIVE */
+@media(max-width:900px){
+
+.container{
+grid-template-columns:1fr;
+}
+
+.hero h2{
+font-size:28px;
+}
+
+header{
+flex-direction:column;
+}
+
+nav{
+margin-top:10px;
+}
+
+}
+
+</style>
+</head>
+
+<body>
+
+<header>
+<h1>ShopSmart</h1>
+<nav>
+<a href="#">Home</a>
+<a href="#">Products</a>
+<a href="#">Deals</a>
+<a href="#">Contact</a>
+</nav>
+</header>
+
+<section class="hero">
+<h2>Biggest Online Sale</h2>
+<p>Shop with the lowest prices and special discounts</p>
+<button>Shop Now</button>
+</section>
+
+<div class="container">
+
+<aside class="sidebar">
+<h3>Categories</h3>
+<ul>
+<li>Electronics</li>
+<li>Clothing</li>
+<li>Shoes</li>
+<li>Home Appliances</li>
+<li>Accessories</li>
+<li>Beauty Products</li>
+</ul>
+</aside>
+
+<section class="products">
+
+<div class="product">
+<img src="https://images.unsplash.com/photo-1511707171634-5f897ff02aa9">
+<h3>Smartphone</h3>
+<p class="price">$199</p>
+<button>Add to Cart</button>
+</div>
+
+<div class="product">
+<img src="https://images.unsplash.com/photo-1523275335684-37898b6baf30">
+<h3>Smart Watch</h3>
+<p class="price">$89</p>
+<button>Add to Cart</button>
+</div>
+
+<div class="product">
+<img src="https://images.unsplash.com/photo-1526170375885-4d8ecf77b99f">
+<h3>Camera</h3>
+<p class="price">$299</p>
+<button>Add to Cart</button>
+</div>
+
+<div class="product">
+<img src="https://images.unsplash.com/photo-1521334884684-d80222895322">
+<h3>Sneakers</h3>
+<p class="price">$59</p>
+<button>Add to Cart</button>
+</div>
+
+<div class="product">
+<img src="https://images.unsplash.com/photo-1512496015851-a90fb38ba796">
+<h3>Headphones</h3>
+<p class="price">$49</p>
+<button>Add to Cart</button>
+</div>
+
+<div class="product">
+<img src="https://images.unsplash.com/photo-1585386959984-a4155224a1ad">
+<h3>Laptop</h3>
+<p class="price">$699</p>
+<button>Add to Cart</button>
+</div>
+
+</section>
+</div>
+
+<section class="discount">
+<h2>Special Festival Discounts</h2>
+<p>Up to 70% OFF on selected products</p>
+</section>
+
+<section class="testimonials">
+<h2>Customer Reviews</h2>
+
+<div class="testimonial-grid">
+
+<div class="testimonial">
+<p>"Amazing deals and fast delivery. Highly recommended!"</p>
+<b>- Rahul</b>
+</div>
+
+<div class="testimonial">
+<p>"Best online store for affordable products."</p>
+<b>- Sneha</b>
+</div>
+
+<div class="testimonial">
+<p>"Great quality items with huge discounts."</p>
+<b>- Amit</b>
+</div>
+
+</div>
+</section>
+
+<footer>
+<p>© 2026 ShopSmart | Lowest Prices Guaranteed</p>
+</footer>
+
+</body>
+</html>
